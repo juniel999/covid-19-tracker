@@ -1,0 +1,39 @@
+.card {
+  border: 2px solid gray;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 200px;
+  width: 150px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.big {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.red {
+  color: rgb(219, 0, 0);
+}
+/* 
+.recovered {
+  background-image: linear-gradient(22deg, #101c7f, #18359f, #1d4fc1, #1f69e3);
+}
+
+.cases {
+  background-image: linear-gradient(25deg, #cc455d, #e4878f, #f5c3c6, #ffffff);
+}
+
+.deaths {
+  background-image: linear-gradient(25deg, #6b0238, #8f012d, #b20120, #d60208);
+} */

@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Kanit", sans-serif;
+  /* color: rgb(219, 217, 217); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: white;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+option {
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background: rgba(248, 242, 242, 0.2);
+}
+
+td {
+  padding: 2px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.app__leftcontent {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.app__leftheader {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__left_countryInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  max-width: 400px;
+  border: 2px solid rgb(165, 159, 159);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* background-image: linear-gradient(25deg, #28042c, #5a0528, #8c0421, #c00215); */
+  transition: all 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app__leftcards {
+  display: flex;
+  align-items: center;
+}
+
+.app__leftcards_left {
+  display: flex;
+}
+
+.app__left_countryInfo:hover {
+  transform: scale(1.05);
+}
+
+.app__left_countryInfo img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 200px;
+}
+
+.app__dropdown {
+  margin-left: 20px;
+  height: 30px;
+  border-radius: 5px;
+  color: rgb(231, 224, 224);
+  margin-right: 40px;
+  padding: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(25deg, #28042c, #5a0528, #8c0421, #c00215);
+  transition: all 0.5s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.app__dropdown:focus,
+.app__dropdown:hover {
+  transform: scale(1.1);
+}
+
+.app__right {
+  border: 2px solid gray;
+  min-width: 300px;
+  height: 740px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: transform 0.5s;
+}
+
+.app__right:hover {
+  transform: scale(1.05);
+}
+
+.app__right h3 {
+  margin-bottom: 30px;
+}
+
+.tsparticles-canvas-el {
+  height: 1500px !important;
+}
+
+.footer_text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 950px) {
+  .app {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app__right {
+    height: 300px;
   }
+}
+
+@media (max-width: 900px) {
+  .app__leftheader {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 486px) {
+  .app__leftcards {
+    flex-direction: column;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
 }
